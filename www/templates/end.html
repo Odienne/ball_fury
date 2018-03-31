@@ -1,0 +1,21 @@
+<ion-view view-title="Fin">
+    <ion-content>
+        <div class="head">
+            <h1>Votre score : {{ points }}</h1>
+        </div>
+        <div class="button-container">
+            <a class="button" ng-click="reset" href="#/app/game">Recommencer <i class="fas fa-3x fa-sync-alt"></i></a>
+
+            <a class="button" ng-click="reset" href="#/app/start">Retour à l'accueil <i class="fas fa-3x fa-home"></i></a>
+        </div>
+        <div class="button-container">
+            <span ng-click='share()' class="button">Partager votre score
+                <i class="fas fa-3x fa-share"></i>
+            </span>
+
+            <span ng-click='mail()' class="button">Inviter un ami
+                <i class="fas fa-3x fa-retweet"></i>
+            </span>
+        </div>
+    </ion-content>
+</ion-view>

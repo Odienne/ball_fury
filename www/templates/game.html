@@ -1,0 +1,17 @@
+<ion-view view-title="Jeu">
+  <ion-content>
+    <div class="head">
+      <h1>Score : {{ points }}</h1>
+      <p>Il vous reste {{ currentTime }}s</p>
+    </div>
+
+    <div class="balle balle-1" ng-click='addpoints(1)'></div>
+    <div class="balle balle-2" ng-click='maluspoints(4)'></div>
+    <div class="balle balle-spe" ng-click='addpoints(6)'></div>
+    <div class="balle balle-3" ng-click='addpoints(2)'></div>
+    <div class="balle balle-3 delayed" ng-click='maluspoints(5)'></div>
+    <div class="balle mega-balle-1" ng-click='addpoints(25)'></div>
+    <div class="balle balle-4" ng-click='addpoints(5)'></div>
+
+  </ion-content>
+</ion-view>

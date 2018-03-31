@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    width: 100vh;
+    height: 100vh;  
+    
+}
+.pane{
+background-color:#fff7f7;
+}
+/*Interface*/
+.head{
+    padding:10px;
+    z-index: 10;
+    position: absolute;
+    width:100%;
+    box-shadow: 1px 1px 5px black;
+    background-color: #fefefe;
+    margin-bottom:10px;
+}
+ion-content{
+    padding: 20px;
+}
+.has-header{
+    top:60px;
+}
+.bar.bar-stable{
+    background-color: #ca0f0f;
+}
+.bar.bar-stable .title{
+    color: white;
+}
+#start{
+    padding-top:200px;
+}
+.button-container{
+    padding-top:120px;
+    display: flex;
+    justify-content: center;
+}
+.button-container .button{
+    display: flex;
+    flex-direction: column;
+}
+.button-container .button svg{
+    margin:auto;
+    color:#ca0f0f;
+}
+.button-container .button:hover svg{
+    margin:auto;
+    color:#ff0000;
+}
+
+
+/*partie du jeu*/
+.balle{
+    margin:20px 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+}
+.balle-1{
+    background-color: green;
+    top:50px;
+    position: relative;
+    animation: move 5s ease-in-out infinite alternate, difforme 8s infinite alternate;
+}
+.balle-2{
+    background-color: yellow;
+    top:150px;
+    position: relative;
+    animation: move 3s ease-in-out infinite alternate;
+}
+.balle-3{
+    top:220px;
+    position: absolute;
+    animation: toptobottom 3s ease-in-out infinite alternate;
+}
+.balle-4{
+    right:100px;
+    background-color: brown;
+    animation: toptobottom 2s linear infinite alternate, difforme 10s infinite alternate;
+}
+.balle-spe{
+    background-color: aquamarine;
+    animation: diago 2s linear infinite alternate;
+}
+.delayed{
+    position: absolute;
+    animation-delay:2s;
+}
+.mega-balle-1{
+    background-color: black;
+    animation: appearandmove 4s infinite alternate;
+}
+
+/*Les animations*/
+@keyframes move {
+    from{
+        left:-20%;
+    }
+    to{
+       left:120%;
+    }
+}
+@keyframes toptobottom {
+    from{
+        top:-20%;
+    }
+    to{
+       top:900px;
+    }
+}
+
+@keyframes appearandmove {
+    0%{
+        top:100px;
+        left:1000;
+        opacity: 0;
+    }
+    25%{
+        top:400px;
+        left:400px;
+        opacity: 1;
+        width:30px;
+        height:30px;
+    }
+    38%{
+        bottom:0px;
+        right:0px;
+    }
+    50%{
+        top:700px;
+        left:900px;
+        opacity:0;
+    }
+    100%{
+        top:500px;
+        left:-100px;
+        opacity:1;
+    }
+}
+@keyframes difforme{
+    0%,100%{
+        height:70px;
+        width:70px;
+    }
+    10%{height:50px; width:20px;}
+    20%{height: 100px; width:100px;}
+    30%{height: 80px; width: 10px;}
+    40%{height: 10px; width: 50px;}
+    50%{height: 70px; width: 60px;}
+    60%{height: 40px; width: 20px;}
+    70%{height: 50px; width: 10px;}
+    80%{height: 40px; width: 100px;}
+    90%{height: 8px; width: 50px;}
+}
+@keyframes diago {
+    from{
+        top:-10%;
+        left:-10%;
+        opacity: 0;
+        width:10px;
+        height:10px;
+
+    }
+    to{
+        top:100%;
+        left:100%;
+        opacity: 1;
+
+    }
+    
+}
